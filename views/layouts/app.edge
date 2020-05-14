@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
  
-  <title>Clean Blog - Start Bootstrap Theme</title>
+  <title>James Black - Software Developer</title>
  
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+      <a class="navbar-brand" href="/">Home</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
@@ -35,10 +35,19 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="about">About Me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/posts/new">New Post</a>
+            <a class="nav-link" href="my-work">My Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="recent-talks">Recent Talks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog">Blog</a>
           </li>
           @if(!auth)
             <li class="nav-item">
@@ -48,6 +57,9 @@
               <a class="nav-link" href="/auth/register">Register</a>
             </li>
           @else
+            <li class="nav-item">
+              <a class="nav-link" href="/posts/new">New Post</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="/auth/logout">Logout</a>
             </li>
@@ -66,26 +78,34 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <ul class="list-inline text-center">
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://twitter.com/JamesBlack93">
                 <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
+		  <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://gitlab.dur.scotgrid.ac.uk/black">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://github.com/JBlack93">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/james-black93/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
             </li>
