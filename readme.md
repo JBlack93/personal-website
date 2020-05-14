@@ -1,10 +1,11 @@
 # Website
+First, a word of note: This is a work in progress. The previous iteration of this website, a wordpress site, suffered from a hardware failure. This has led to the development of this site, which is built with [Node.js](https://nodejs.org/en/), stored with [MongoDB](https://www.mongodb.com/), and deployed with [Apache2](https://httpd.apache.org/) and [Phusion Passenger](https://www.phusionpassenger.com/). It is built further with the use of many node modules, including [Express.js](https://expressjs.com/).
 
 # Setting up this website
-First, assuming a completely new Raspberry Pi system install (tested most recently with [Buster](https://www.raspberrypi.org/downloads/raspbian/), we need to set up the necessary tools. A complete guide for this is available [here](https://pimylifeup.com/node-red-raspberry-pi/), but a basic summarry of the commands is below:
+First, assuming a completely new Raspberry Pi system install (tested most recently with [Buster](https://www.raspberrypi.org/downloads/raspbian/), we need to set up the necessary tools. A complete guide for this is available [here](https://pimylifeup.com/node-red-raspberry-pi/), but a basic summary of the commands is below:
 
 ## Installation
-We are going to use nvm (Node-Version-Manager). Which is an excellent tool.
+We are going to use `nvm` (Node-Version-Manager). Which is an excellent tool.
 ```
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.35.2/install.sh | bash
 nvm install node   # installs latest version of nodejs
@@ -16,7 +17,7 @@ Use npm install. In turn use `sudo npm install <modulename>` for missing modules
 
 ## Deploying
 
-Passenger and Apache2 are used to deploy the website. This can be set up very easily. Apache2, installed as it usually would, and then the application itself placed in `/var/www/website`. The apache2 configuration file, `misc/site.conf` is then added to `/etc/apache2/sites-available/jamesblack.ddns.net.conf`. THen we enable some modules and the site itself:
+Passenger and Apache2 are used to deploy the website. This can be set up very easily. Apache2, installed as it usually would, and then the application itself placed in `/var/www/website`. The apache2 configuration file, `misc/jamesblack.ddns.net.conf` is then added to `/etc/apache2/sites-available/jamesblack.ddns.net.conf`. Then we enable some modules and the site itself:
 
 ```
 sudo a2enmod rewrite
@@ -29,8 +30,6 @@ Note, that on raspbian buster the notes on how to install apache2 headers are in
 ```
 apt_get_install "apache2-dev"
 ```
-
-Then, with the config file (also included in this repo under "misc/", placed under `/etc/apache2/sites-available` one can quickly and easily update logs and other information on the fly.
 
 ### Enforce https connections
 
@@ -111,8 +110,6 @@ sudo certbot certonly
 Select Option 2 (by webroot). Enter the domain: `jamesblack.ddns.net`. Enter the webroot (which, to match apache2: `/var/www/website/public`.
 
 Now we have a fully encrypted connection which is allowed over https. 
-
-Now, we supe up the blog with the use of [this guide](https://vegibit.com/node-js-blog-tutorial/).
 
 ## Installing MongoDB
 
@@ -235,7 +232,15 @@ Mon May 11 22:48:47.822 [initandlisten]
 bye
 
 ```
-Finally, we can start the database service
+We can now start the database service. You'll likely need to first use this database as :
+```
+sudo mongod --storageEngine=mmapv1 
+```
+Since we only have this supported (raspbian is only 32bit). Further, you may have to create the directory `/data/db`, or specify where you want the database to be kept. 
+
+Finally, we can start our services: 
 ```
 sudo service mongodb start
+sudo service apache2 start
 ```
+If you have the appropriate port-forwarding set up and the DNS set up as it should be (see [noip](www.noip.com)), then the webpage should come live at `https://jamesblack.ddns.net`
