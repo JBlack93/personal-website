@@ -38,7 +38,7 @@ sudo apt install python-certbot-apache
 ```
 Next, we need to ensure that the https traffic is allowed through your firewall:
 
-``
+```
 sudo ufw status
 ```
 It will probably look like this, meaning that only HTTP traffic is allowed to the web server:

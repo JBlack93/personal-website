@@ -20,6 +20,7 @@
       "express-edge": "^1.0.0",
       "express-fileupload": "^1.1.7-alpha.3",
       "express-session": "^1.17.1",
+      "jquery": "^3.5.1",
       "mongodb": "^3.5.7",
       "mongoose": "^5.9.14",
       "popper.js": "^1.16.1",
