@@ -1,0 +1,6 @@
+<map id="/home/black/projects/REDonFDTD/include/REDonFDTD/source.hpp" name="/home/black/projects/REDonFDTD/include/REDonFDTD/source.hpp">
+<area shape="rect" id="node1" title="Contains the abstract source class, which also includes factory method." alt="" coords="84,5,323,61"/>
+<area shape="rect" id="node2" href="$EMfunctions_8hpp.html" title="Header file with all EM function declarations." alt="" coords="5,213,244,269"/>
+<area shape="rect" id="node3" href="$particle_8hpp.html" title="Contains the Particle class." alt="" coords="84,109,323,165"/>
+<area shape="rect" id="node4" href="$ricker_8hpp.html" title="Functions for Ricker source declarations." alt="" coords="347,109,585,165"/>
+</map>

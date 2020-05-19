@@ -1,0 +1,12 @@
+<map id="/home/black/projects/REDonFDTD/include/REDonFDTD/EMfunctions.hpp" name="/home/black/projects/REDonFDTD/include/REDonFDTD/EMfunctions.hpp">
+<area shape="rect" id="node1" title="Header file with all EM function declarations." alt="" coords="232,5,471,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="513,408,569,435"/>
+<area shape="rect" id="node3" href="$source_8hpp.html" title="Contains the abstract source class, which also includes factory method." alt="" coords="199,184,375,211"/>
+<area shape="rect" id="node5" href="$mesh_8hpp.html" title="Contains the Mesh class." alt="" coords="5,259,175,285"/>
+<area shape="rect" id="node10" href="$particle_8hpp.html" title="Contains the Particle class." alt="" coords="325,109,508,136"/>
+<area shape="rect" id="node4" title=" " alt="" coords="406,259,491,285"/>
+<area shape="rect" id="node9" href="$utilities_8hpp.html" title="Header file containing std::array manipulation functions." alt="" coords="199,259,381,285"/>
+<area shape="rect" id="node6" title=" " alt="" coords="191,408,253,435"/>
+<area shape="rect" id="node7" title=" " alt="" coords="128,333,191,360"/>
+<area shape="rect" id="node8" href="$config_8hpp.html" title="Contains the configuration class." alt="" coords="267,333,439,360"/>
+</map>

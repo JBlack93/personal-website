@@ -1,0 +1,11 @@
+<map id="/home/black/projects/REDonFDTD/include/REDonFDTD/particle.hpp" name="/home/black/projects/REDonFDTD/include/REDonFDTD/particle.hpp">
+<area shape="rect" id="node1" title="Contains the Particle class." alt="" coords="119,5,358,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="229,184,315,211"/>
+<area shape="rect" id="node3" title=" " alt="" coords="85,333,141,360"/>
+<area shape="rect" id="node4" href="$config_8hpp.html" title="Contains the configuration class." alt="" coords="247,259,419,285"/>
+<area shape="rect" id="node6" href="$mesh_8hpp.html" title="Contains the Mesh class." alt="" coords="390,184,559,211"/>
+<area shape="rect" id="node8" href="$source_8hpp.html" title="Contains the abstract source class, which also includes factory method." alt="" coords="88,109,264,136"/>
+<area shape="rect" id="node9" href="$utilities_8hpp.html" title="Header file containing std::array manipulation functions." alt="" coords="22,184,205,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="407,333,470,360"/>
+<area shape="rect" id="node7" title=" " alt="" coords="443,259,506,285"/>
+</map>
