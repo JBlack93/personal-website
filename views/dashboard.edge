@@ -2,14 +2,13 @@
  
 @section('content')
 <!-- Page Header -->
-  <header class="masthead" style="background-image: url('images/energy.jpg')" alt="Photo by Rowan Heuvel on Unsplash">  
-    <div class="overlay"></div>
+<header class="page-header" style="background-image: url('https://jamesblack.ddns.net/images/cropped-energy.jpg'); padding: 50px 0 10px 100px; background-size: 100% 450px;">
+  <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="site-heading">
-          <h1>James Black</h1>
-          <span class="subheading">Software Engineer · Physics PhD</span>
+        <div class="page-heading">
+          <h1 style="color:white">Dashboard</h1>
         </div>
       </div>
     </div>
@@ -20,12 +19,13 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
+    <h2> Welcome - - Your Posts </h2>
       @each(post in posts)
         <div class="post-preview">
           <a href="/post/{{ post._id }}">
-            <h2 class="post-title">
+            <h4 class="post-title">
               {{ post.title }}
-            </h2>
+            </h4>
           </a>
 	  <p class="post-meta">Posted by
             <a href="#">{{ post.username }}</a>

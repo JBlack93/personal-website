@@ -7,6 +7,8 @@ const fileUpload = require("express-fileupload");
 const expressSession = require('express-session');
 const connectMongo = require('connect-mongo');
 const connectFlash = require("connect-flash");
+const passport = require('passport');
+
 
 const app = new express();
 
@@ -17,6 +19,7 @@ const redirectIfAuthenticated = require('./middleware/redirectIfAuthenticated');
 const logoutController = require("./controllers/logout");
 const createPostController = require('./controllers/createPost');
 const homePageController = require('./controllers/homePage');
+const dashboardController = require('./controllers/dashboard');
 const aboutPageController = require('./controllers/about');
 const workPageController = require('./controllers/work');
 const experienceController = require('./controllers/experience');
@@ -66,6 +69,7 @@ app.get("/my-work", workPageController);
 app.get("/experience", experienceController);
 app.get("/recent-talks", recentTalksController);
 app.get("/blog", blogController);
+app.get("/dashboard", dashboardController);
 app.get("/post/:id", getPostController);
 app.get("/posts/new", auth, createPostController);
 app.post("/posts/store", auth, storePost, storePostController);
